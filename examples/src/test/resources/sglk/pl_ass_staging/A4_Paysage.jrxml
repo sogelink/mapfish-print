@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8b37395f-6424-4997-83d4-dc7a47b5f269">
+	<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="defaultStyle" isDefault="true" fontName="DejaVu Sans" fontSize="8"/>
+	<parameter name="mapSubReport" class="java.lang.String"/>
+	<parameter name="scalebarSubReport" class="java.lang.String"/>
+	<parameter name="mapContext" class="org.mapfish.print.attribute.map.MapfishMapContext"/>
+	<parameter name="att_numConsultation" class="java.lang.String"/>
+	<parameter name="att_idChantier" class="java.lang.String"/>
+	<parameter name="att_idDocumentDemande" class="java.lang.String"/>
+	<parameter name="att_refChantier" class="java.lang.String"/>
+	<parameter name="att_chantierCommune" class="java.lang.String"/>
+	<parameter name="att_emetteurAdresse" class="java.lang.String"/>
+	<parameter name="att_emetteurComplet" class="java.lang.String"/>
+	<parameter name="att_chantierAdresseComplete" class="java.lang.String"/>
+	<parameter name="att_destinataireAdresse" class="java.lang.String"/>
+	<parameter name="att_chantierAdresse" class="java.lang.String"/>
+	<parameter name="att_destinatairePrenom" class="java.lang.String"/>
+	<parameter name="att_emetteurPrenom" class="java.lang.String"/>
+	<parameter name="att_chantierCodePostal" class="java.lang.String"/>
+	<parameter name="att_destinataireNom" class="java.lang.String"/>
+	<parameter name="att_emetteurNom" class="java.lang.String"/>
+	<parameter name="att_destinataireComplet" class="java.lang.String"/>
+	<parameter name="att_pointList" class="java.lang.String"/>
+	<field name="mapSubReport" class="java.lang.String"/>
+	<field name="name" class="java.lang.Integer"/>
+	<field name="top" class="java.lang.Integer"/>
+	<field name="bottom" class="java.lang.Integer"/>
+	<field name="left" class="java.lang.Integer"/>
+	<field name="right" class="java.lang.Integer"/>
+	<field name="scalebarSubReport" class="java.lang.String"/>
+	<field name="overviewMapSubReport" class="java.lang.String"/>
+	<field name="mapContext" class="org.mapfish.print.attribute.map.MapfishMapContext"/>
+	<title>
+		<band height="555" splitType="Prevent">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<frame>
+				<reportElement x="0" y="6" width="802" height="472" uuid="0c6303de-f974-41e8-b138-0dc709cd6a34"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<subreport>
+					<reportElement x="0" y="0" width="802" height="472" uuid="0b760159-29b7-45b8-ae16-8bcf6a3c550b">
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<subreportExpression><![CDATA[$P{mapSubReport}]]></subreportExpression>
+				</subreport>
+			</frame>
+			<rectangle>
+				<reportElement x="154" y="501" width="15" height="49" backcolor="#000000" uuid="832ef2d0-dc1c-4dd8-8381-93ce2a01bf07"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="1" y="-7" width="150" height="16" uuid="bfed70d3-6349-47a9-b6c6-d86830653b82"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Plan des ouvrages du réseau d']]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="143" y="-7" width="46" height="16" forecolor="#AD302A" uuid="6ccc24ad-2ea5-4f4d-8d4e-6e360c2c48c9"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[eau usée]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="249" y="-7" width="90" height="16" forecolor="#000000" uuid="928d4273-295a-4502-a531-b3ae48a3955c"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ - Plan général (1/1)]]></text>
+			</staticText>
+			<image>
+				<reportElement x="739" y="-14" width="62" height="19" uuid="f627bc7d-b1bf-4bdb-a97b-f72c711e145f">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["logo_VEOLIA_FOLIOTAGE.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="190" y="-7" width="25" height="16" forecolor="#000000" uuid="f4c2e484-6151-4681-a940-d2a079605ae4"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[et de]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="217" y="-7" width="33" height="16" forecolor="#24BD29" uuid="21252fb1-7935-4456-8c05-3d6446e146c1"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[pluvial]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="501" width="15" height="48" forecolor="#FFFFFF" backcolor="#000000" uuid="2a443a63-b433-4430-b435-b0c54bd61b54"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Info. plan]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="180" y="535" width="7" height="1" forecolor="#000000" backcolor="#000000" uuid="95e09bf9-3de2-4b92-851d-83462c067dbd"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="15" y="480" width="195" height="75" uuid="84a67c2f-ba76-43d6-a478-f545779bf929"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="601" y="480" width="133" height="75" uuid="861451f3-5a19-4a1c-85fe-3ddbf3c96a3d"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<subreport>
+				<reportElement x="627" y="501" width="76" height="22" uuid="bbe95616-0ff1-433d-b728-e1b6e0c585a5"/>
+				<subreportExpression><![CDATA[$P{scalebarSubReport}]]></subreportExpression>
+			</subreport>
+			<rectangle>
+				<reportElement x="0" y="480" width="15" height="75" backcolor="#000000" uuid="28a09289-610f-4016-be67-e599ae26c861"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="487" width="15" height="61" forecolor="#FFFFFF" backcolor="#000000" uuid="d584451a-0e60-4c72-8596-e13c44d0919f"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Info. DICT]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="228" y="480" width="370" height="75" uuid="6b9d7338-c71e-46f7-b4b2-5273ad4db334"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="213" y="480" width="15" height="75" backcolor="#000000" uuid="afba1945-6cb7-44e3-b62c-70929a339f34"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="213" y="485" width="15" height="64" forecolor="#FFFFFF" backcolor="#000000" uuid="c9cc3000-6398-4ab2-8265-74f4c96a948a"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Info. plan]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="737" y="480" width="65" height="75" uuid="74d17062-8f27-477b-b22f-37c10f815ec2"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<image>
+				<reportElement x="759" y="508" width="20" height="27" uuid="c3a32eab-03d0-43e0-992f-f32d99a16ffa"/>
+				<imageExpression><![CDATA["nord_2.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="22" y="484" width="50" height="13" uuid="1a9c2a2b-8745-45d1-a161-0d4293a23e7e"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Adresse :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="521" width="81" height="15" uuid="7d6ee856-a202-4f16-86fb-fb217c3255be"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date d'édition :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="111" y="537" width="94" height="13" uuid="a2f8e357-7a0c-46c6-a2b4-32f56e2b16d9"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{att_numConsultation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="ContainerBottom" x="103" y="522" width="85" height="16" uuid="673de393-4190-40a1-8a7a-ffb3704df1d1"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy").format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="73" y="508" width="40" height="14" uuid="3f059db4-1fff-4531-8819-8d9655cf6999"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{att_chantierCodePostal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="22" y="535" width="87" height="13" uuid="dbfabd9e-e328-4343-9088-ed8f38f1dae9"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N° Consultation : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="103" y="508" width="106" height="14" uuid="b0d3beb3-7c56-4041-a99c-69e30caa6333"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{att_chantierCommune}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="73" y="486" width="136" height="22" uuid="b14f9f0e-e9a5-49bc-b139-98396f8b8f55"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{att_chantierAdresse}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="345" y="528" width="7" height="1" forecolor="#000000" backcolor="#000000" uuid="ba737fb3-ca4b-435a-94eb-b0f32e1924e8"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="451" y="503" width="114" height="12" uuid="3d9b225b-188e-4430-9b00-7bff4f214f43"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[classe de précision C]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="241" y="485" width="125" height="16" uuid="3c021a8d-a2dc-436d-866e-18b78fd5d7c8"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Classe de précision]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="412" y="513" width="153" height="12" uuid="67458c95-e925-4aaf-8c10-335df31774fc"/>
+				<textElement>
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[sont indiqués de la manière suivante :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="357" y="537" width="244" height="12" uuid="cc0f0a53-33d8-48a3-87bf-2fbcfc03d51a"/>
+				<textElement>
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[: Pour points singuliers (coordonnées disponibles sur feuille dédiée)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="326" y="513" width="88" height="12" uuid="aca09e4a-214f-48a7-b99a-b85a4a1d7bdb"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[classe de précision A]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="357" y="526" width="214" height="11" uuid="366f80a8-b5a0-44c1-9cfb-38316727cff6"/>
+				<textElement>
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[: Pour objets linéaires]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="252" y="525" width="95" height="15" uuid="fdbdee2b-b396-4103-85a7-88ab99c687b6"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Diamètre Matériau [A]]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="344" y="487" width="168" height="11" uuid="6e680c7d-19d5-4061-9469-0c7d4ba47835"/>
+				<textElement>
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[(Système de coordonnées : Lambert 93)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="503" width="212" height="13" uuid="10fcb56d-1e8d-4321-a05a-330967c03370"/>
+				<textElement>
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Par défaut, les ouvrages figurant sur le plan sont rangés en]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="513" width="98" height="11" uuid="04c04791-422e-42e6-a8f5-f137d7d69a23"/>
+				<textElement>
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Les éléments rangés en]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="241" y="528" width="7" height="1" forecolor="#000000" backcolor="#000000" uuid="90f88c39-306a-4d8a-93d4-94a198d1015a"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="290" y="538" width="19" height="12" forecolor="#CC110E" uuid="b2916bc3-e494-4126-a1f2-ce4b68e31a41"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[A23]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="632" y="483" width="42" height="14" uuid="c700077b-0a14-4d3a-a476-49dd68b8a3e9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Echelle :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="676" y="483" width="33" height="14" uuid="bed05385-c48f-4220-a299-162ebcfe37e6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[String.format("1:%.0f", $P{mapContext}.getRoundedScaleDenominator(true))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="627" y="522" width="80" height="14" uuid="c033cc97-2d74-4b43-a5a9-2a2ac7927ae7"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Format d'impression :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="643" y="533" width="53" height="16" uuid="539174a2-396a-4c1b-91e7-c33d77567ea4"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[A4 Paysage]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="743" y="482" width="52" height="16" uuid="4a6078b8-42ac-4e6d-8d95-e5c438afdc48"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Orientation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="760" y="496" width="24" height="11" backcolor="#FFFFFF" uuid="2f611e93-58d5-42a8-b2c0-d0167d816ae5"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Nord]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>

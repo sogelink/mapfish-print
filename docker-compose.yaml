@@ -4,7 +4,8 @@ services:
     volumes:
       - ./examples/geoserver-data/:/mnt/geoserver_datadir
       - ./core/src/test/resources/map-data/:/mnt/geoserver_datadir/www/map-data
-
+    ports:
+      - 8082:8080
   print:
     image: mapfish_print_tester
     user: ${USER_ID}

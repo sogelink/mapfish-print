@@ -88,7 +88,13 @@ make acceptance-tests-up
 Run the example:
 
 ```bash
-docker compose exec builder gradle print -PprintArgs="-config /src/examples/src/test/resources/examples/simple/config.yaml -spec /src/examples/src/test/resources/examples/simple/requestData.json -output /src/examples/output.pdf"
+./gradlew print -PprintArgs="-config ../examples/src/test/resources/examples/paging_with_overview_layer/config.yaml -spec ../examples/src/test/resources/examples/paging_with_overview_layer/requestData-polygon.json -output ./output.png"
+
+
+./gradlew print -PprintArgs="-config ../examples/src/test/resources/sglk/pl_ass_staging/config.yaml -spec ../examples/src/test/resources/sglk/pl_ass_staging/requestBig.json -output ../examples/src/test/resources/sglk/pl_ass_staging/outputBig.pdf"
+
+./gradlew print -PprintArgs="-config ../examples/src/test/resources/sglk/pl_ass_staging/config.yaml -spec ../examples/src/test/resources/sglk/pl_ass_staging/requestSmall.json -output ../examples/src/test/resources/sglk/pl_ass_staging/outputSmall.pdf"
+
 ```
 
 # To use in Eclipse

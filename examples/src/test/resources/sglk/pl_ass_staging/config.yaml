@@ -1,0 +1,296 @@
+templates:
+  #===========================================================================
+  A4_Paysage: !template
+  # utilisé pour ne pas se répéter dans les templates suivante
+  #===========================================================================
+    reportTemplate: A4_Paysage.jrxml
+    attributes:
+      att_pointList: !string {default : ''}
+      att_numConsultation: !string {default : ''}
+      att_idChantier: !string {default : ''}
+      att_idDocumentDemande: !string {default : ''}
+      att_refChantier: !string {default : ''}
+      att_chantierCommune: !string {default : ''}
+      att_emetteurAdresse: !string {default : ''}
+      att_emetteurComplet: !string {default : ''}
+      att_chantierAdresseComplete: !string {default : ''}
+      att_destinataireAdresse: !string {default : ''}
+      att_chantierAdresse: !string {default : ''}
+      att_destinatairePrenom: !string {default : ''}
+      att_emetteurPrenom: !string {default : ''}
+      att_chantierCodePostal: !string {default : ''}
+      att_destinataireNom: !string {default : ''}
+      att_emetteurNom: !string {default : ''}
+      att_destinataireComplet: !string {default : ''}
+      att_pointList: !string {default : ''}
+      map: &MAP !map
+        maxDpi: 400
+        width: 802
+        height: 472
+        zoomLevelSnapStrategy: HIGHER_SCALE
+        zoomLevels: &ZOOMLEVELS !zoomLevels
+          scales: [ 500, 1000, 2000, 5000, 7500, 10000, 20000, 50000, 75000 , 100000, 250000, 500000, 750000, 1000000, 2500000, 5000000, 7500000, 10000000, 25000000, 50000000, 75000000, 100000000]
+        default:
+            useNearestScale: true
+            dpi: 250
+            longitudeFirst: true
+            rotation : 0
+#            zoomToFeatures:
+#                minScale: 1000
+#                minMargin: 10
+#                zoomType: extent
+#                layer: emprise
+      scalebar: &SCALEBAR !scalebar
+        width: 88
+        height: 20
+        default:
+          type: bar_sub
+          intervals: 5
+          fontSize: 6
+          lineWidth: 1
+          barSize: 5
+          renderAsSvg: true
+          geodetic: true
+          align: "center"
+      backgroundLayers: &BACKGROUNDLAYERS !staticLayers
+        default:
+          layers:
+            # - type: wms
+            #   name : agg_national_aeu_gen_auto
+            #   layers : ["clients:3608"]
+            #   baseURL: @@geoserver_clients_url@@/wms
+            #   imageFormat : image/png
+            #   version : 1.3.0
+            #   styles :
+            #   customParams : {
+            #       "PRINT-ROLE" : "ROLE_SGLK_USER",
+            #       "PRINT-USERNAME" : "gen_auto@sogelink.fr",
+            #       "TRANSPARENT" : "TRUE"
+            #   }
+            - type: WMTS
+              name : veolia2154
+              layer : veolia2154
+              baseURL : https://prd-map-server.m-ve.com/mapcache/wmts
+              imageFormat : image/png
+              requestEncoding : KVP
+              version : 1.0.0
+              opacity: 1
+              matrixSet: LAMB93
+              matrices:
+                - identifier: 0
+                  matrixSize: [4, 3]
+                  scaleDenominator: 7314285.71428571455180644989
+                  tileSize: [256, 256]
+                  topLeftCorner: [-357823.236500, 7609872.693900]
+                - identifier: 1
+                  matrixSize: [7, 5]
+                  scaleDenominator: 3657142.85714285727590322495
+                  tileSize: [256, 256]
+                  topLeftCorner: [-357823.236500, 7347728.693900]
+                - identifier: 2
+                  matrixSize: [13, 10]
+                  scaleDenominator: 1828571.42857142863795161247
+                  tileSize: [256, 256]
+                  topLeftCorner: [-357823.236500, 7347728.693900]
+                - identifier: 3
+                  matrixSize: [26, 19]
+                  scaleDenominator: 914285.71428571431897580624
+                  tileSize: [256, 256]
+                  topLeftCorner: [-357823.236500, 7282192.693900]
+                - identifier: 4
+                  matrixSize: [51, 37]
+                  scaleDenominator: 457142.85714285715948790312
+                  tileSize: [256, 256]
+                  topLeftCorner: [-357823.236500, 7249424.693900]
+                - identifier: 5
+                  matrixSize: [103, 73]
+                  scaleDenominator: 228571.42857142857974395156
+                  tileSize: [256, 256]
+                  topLeftCorner: [-357823.236500, 7233040.693900]
+                - identifier: 6
+                  matrixSize: [205, 146]
+                  scaleDenominator: 114285.71428571428987197578
+                  tileSize: [256, 256]
+                  topLeftCorner: [-357823.236500, 7233040.693900]
+                - identifier: 7
+                  matrixSize: [409, 292]
+                  scaleDenominator: 57142.85714285714493598789
+                  tileSize: [256, 256]
+                  topLeftCorner: [-357823.236500, 7233040.693900]
+                - identifier: 7
+                  matrixSize: [409, 292]
+                  scaleDenominator: 57142.85714285714493598789
+                  tileSize: [256, 256]
+                  topLeftCorner: [-357823.236500, 7233040.693900]
+                - identifier: 8
+                  matrixSize: [817, 583]
+                  scaleDenominator: 28571.42857142857246799394
+                  tileSize: [256, 256]
+                  topLeftCorner: [-357823.236500, 7230992.693900]
+                - identifier: 9
+                  matrixSize: [1633, 1166]
+                  scaleDenominator: 14285.71428571428623399697
+                  tileSize: [256, 256]
+                  topLeftCorner: [-357823.236500, 7230992.693900]
+                - identifier: 10
+                  matrixSize: [3265, 2332]
+                  scaleDenominator: 7142.85714285714311699849
+                  tileSize: [256, 256]
+                  topLeftCorner: [-357823.236500, 7230992.693900]
+                - identifier: 11
+                  matrixSize: [6530, 4663]
+                  scaleDenominator: 3571.42857142857155849924
+                  tileSize: [256, 256]
+                  topLeftCorner: [-357823.236500, 7230736.693900]
+                - identifier: 12
+                  matrixSize: [13059, 9326]
+                  scaleDenominator: 1785.71428571428577924962
+                  tileSize: [256, 256]
+                  topLeftCorner: [-357823.236500, 7230736.693900]
+                - identifier: 13
+                  matrixSize: [26117, 18652]
+                  scaleDenominator: 892.85714285714288962481
+                  tileSize: [256, 256]
+                  topLeftCorner: [-357823.236500, 7230736.693900]
+                - identifier: 14
+                  matrixSize: [52233, 37304]
+                  scaleDenominator: 446.42857142857144481241
+                  tileSize: [256, 256]
+                  topLeftCorner: [-357823.236500, 7230736.693900]
+                - identifier: 15
+                  matrixSize: [104466, 74608]
+                  scaleDenominator: 223.21428571428572240620
+                  tileSize: [256, 256]
+                  topLeftCorner: [-357823.236500, 7230736.693900]
+                - identifier: 16
+                  matrixSize: [208932, 149215]
+                  scaleDenominator: 111.60714285714286120310
+                  tileSize: [256, 256]
+                  topLeftCorner: [-357823.236500, 7230728.693900]
+                - identifier: 17
+                  matrixSize: [417864, 298430]
+                  scaleDenominator: 55.80357142857143060155
+                  tileSize: [256, 256]
+                  topLeftCorner: [-357823.236500, 7230728.693900]
+                - identifier: 18
+                  matrixSize: [835728, 596860]
+                  scaleDenominator: 27.90178571428571530078
+                  tileSize: [256, 256]
+                  topLeftCorner: [-357823.236500, 7230728.693900]
+      overlayLayers: &OVERLAYLAYERS !staticLayers
+        default:
+          layers:
+            - type: grid
+              gridType: points
+              numberOfLines: [ 5, 3]
+              renderAsSvg: true
+              labelColor: black
+              haloColor: rgba(255,255,255,0)
+              haloRadius: -5
+              labelProjection: EPSG:2154
+              gridColor: rgba(0,0,0,0)
+              indent: 10
+              font:
+                name: ["DejaVu Sans"]
+                size: 9
+                style: PLAIN
+    processors:
+      - !reportBuilder # compile all reports in current directory
+        directory: '.'
+      - !addBackgroundLayers
+        inputMapper:
+          backgroundLayers: staticLayers
+          map: map
+      - !addOverlayLayers
+        inputMapper:
+          overlayLayers: staticLayers
+          map: map
+      - !configureHttpRequests
+        httpProcessors:
+          - !addHeaders
+            headers:
+              Referer : "@@referer@@"
+      - !createMap {}
+      - !createScalebar {}
+  #===========================================================================
+  A4_folioPaysage: !template
+  #===========================================================================
+    reportTemplate: A4_folioPaysage.jrxml
+    tableData: jrDataSource
+    attributes:
+      att_pointList: !string {default : ''}
+      att_numConsultation: !string {default : ''}
+      att_idChantier: !string {default : ''}
+      att_idDocumentDemande: !string {default : ''}
+      att_refChantier: !string {default : ''}
+      att_chantierCommune: !string {default : ''}
+      att_emetteurAdresse: !string {default : ''}
+      att_emetteurComplet: !string {default : ''}
+      att_chantierAdresseComplete: !string {default : ''}
+      att_destinataireAdresse: !string {default : ''}
+      att_chantierAdresse: !string {default : ''}
+      att_destinatairePrenom: !string {default : ''}
+      att_emetteurPrenom: !string {default : ''}
+      att_chantierCodePostal: !string {default : ''}
+      att_destinataireNom: !string {default : ''}
+      att_emetteurNom: !string {default : ''}
+      att_destinataireComplet: !string {default : ''}
+      att_pointList: !string {default : ''}
+      map: *MAP
+      scalebar: *SCALEBAR
+      paging: !paging
+        default:
+          scale: 2000
+          overlap: 0
+          renderPagingOverview: true
+          pagingOverviewStyle: {
+              "version": "2",
+              "*": {
+                "symbolizers": [
+                  {
+                    "strokeColor": "#000000",
+                    "strokeDashstyle": "solid",
+                    "strokeOpacity": 1,
+                    "strokeWidth": 1,
+                    "fillColor": "#0000FF",
+                    "fillOpacity": 0.1,
+                    "type": "line"
+                  },
+                  {
+                    "type": "text",
+                    "label": "[strReplace(name+1,'\\.0','',true)]",
+                    "haloRadius" : 1,
+                    "haloColor" : "#FFFFFF",
+                    "fontColor" : "#000000",
+                    "fontFamily" : "DejaVu Sans"
+                  }
+                ]
+              }
+            }
+      backgroundLayers: *BACKGROUNDLAYERS
+      overlayLayers: *OVERLAYLAYERS
+    processors:
+      - !reportBuilder # compile all reports in current directory
+        directory: '.'
+      - !addBackgroundLayers
+        inputMapper:
+          backgroundLayers: staticLayers
+          map: map
+      - !addOverlayLayers
+        inputMapper:
+          overlayLayers: staticLayers
+          map: map
+      - !configureHttpRequests
+        httpProcessors:
+          - !addHeaders
+            headers:
+              Referer : "@@referer@@"
+      - !createMapPages {}
+      - !createMap {}
+      - !createScalebar {}
+      - !createDataSource
+        attributes:
+          scalebar: *SCALEBAR
+        processors:
+          - !createMap {}
+          - !createScalebar {}

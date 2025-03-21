@@ -1,0 +1,92 @@
+{
+  "layout": "A4_Paysage",
+  "attributes": {
+    "map": {
+      "projection": "EPSG:2154",
+      "dpi": 254,
+      "areaOfInterest": {
+        "display": "NONE",
+        "area": {
+          "type": "FeatureCollection",
+          "crs": {
+            "type": "name",
+            "properties": {
+              "name": "EPSG:2154"
+            }
+          },
+          "features": [
+            {
+              "type": "Feature",
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [1032477.4628049042, 6827569.375778639],
+                    [1032478.4373337181, 6827552.293130492],
+                    [1032534.3801253767, 6827555.484817368],
+                    [1032533.4054325888, 6827572.567456161],
+                    [1032477.4628049042, 6827569.375778639]
+                  ]
+                ]
+              },
+              "properties": {},
+              "id": "feature-0"
+            }
+          ]
+        }
+      },
+      "longitudeFirst": true,
+      "layers": [
+        {
+          "name": "emprise",
+          "type": "geojson",
+          "style": {
+            "fillOpacity": 0.2,
+            "strokeLinecap": "round",
+            "*": {
+              "symbolizers": [
+                {
+                  "strokeWidth": 0.2,
+                  "strokeDashstyle": "solid",
+                  "type": "polygon"
+                }
+              ]
+            },
+            "strokeColor": "blue",
+            "version": "2",
+            "strokeOpacity": 1
+          },
+          "geoJson": {
+            "type": "FeatureCollection",
+            "crs": {
+              "type": "name",
+              "properties": {
+                "name": "EPSG:2154"
+              }
+            },
+            "features": [
+              {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Polygon",
+                  "coordinates": [
+                    [
+                      [1032477.4628049042, 6827569.375778639],
+                      [1032478.4373337181, 6827552.293130492],
+                      [1032534.3801253767, 6827555.484817368],
+                      [1032533.4054325888, 6827572.567456161],
+                      [1032477.4628049042, 6827569.375778639]
+                    ]
+                  ]
+                },
+                "properties": {},
+                "id": "feature-0"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "outputFormat": "pdf"
+}

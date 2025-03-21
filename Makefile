@@ -35,7 +35,7 @@ tests: build-builder
 	mkdir --parent core/build/resources/
 	mkdir --parent core/build/scripts/
 	mkdir --parent examples/build/resources/test/
-	docker run --rm --user=$(shell id -u):$(shell id -g) \
+	docker run --rm --user=root:root \
 		--volume=$(PWD)/core/src/:/src/core/src/:ro \
 		--volume=$(PWD)/core/build/reports/:/src/core/build/reports/ \
 		--volume=$(PWD)/core/build/resources/:/src/core/build/resources/ \

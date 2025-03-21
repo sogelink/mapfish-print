@@ -1,0 +1,44 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [7.499763940250546, 48.463109559922344],
+            [7.499763940250546, 48.462955631537085],
+            [7.500521890967946, 48.462955631537085],
+            [7.500521890967946, 48.463109559922344],
+            [7.499763940250546, 48.463109559922344]
+          ]
+        ]
+      }
+    }
+  ],
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:4326"
+    }
+  },
+  "properties": {
+    "idChantier": "0123456789",
+    "refChantier": "test-map-FOLIO_A4_2154_500e",
+    "numConsultation": "2021010500001DAA",
+    "idDocumentDemande": "14023658",
+    "chantierAdresseComplete": "nr, 34540 BALARUC LES BAINS",
+    "chantierAdresse": "nr",
+    "chantierCodePostal": "34540",
+    "chantierCommune": "BALARUC LES BAINS",
+    "emetteurAdresse": "Rue du Moulin 1234 BERTEAUCOURT LES DAMES CEDEX BP 20602 ",
+    "emetteurComplet": "BOULLE Vincent",
+    "destinataireAdresse": "1 rue Eugène Henaff BP 118 TRAPPES CEDEX ",
+    "destinatairePrenom": "Armand",
+    "emetteurPrenom": "Vincent",
+    "destinataireNom": "BRIGATO",
+    "emetteurNom": "BOULLE",
+    "destinataireComplet": "BRIGATO Armand"
+  }
+}
