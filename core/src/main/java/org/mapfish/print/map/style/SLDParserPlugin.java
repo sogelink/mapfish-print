@@ -88,7 +88,10 @@ public class SLDParserPlugin implements StyleParserPlugin {
     Assert.isTrue(
         styleIndex == null || styleIndex > -1, "styleIndex must be > -1 but was: " + styleIndex);
 
-    if (RASTER.equals(new String(bytes, Charset.defaultCharset()))) {
+    // Trim to prevent space or \n in content
+    String content = new String(bytes, Charset.defaultCharset()).trim();
+    // No parsing required if content is RASTER or content is not starting with opening bracket
+    if (RASTER.equals(content) || !content.startsWith("<")) {
       return Optional.empty();
     }
     final Style[] styles;
